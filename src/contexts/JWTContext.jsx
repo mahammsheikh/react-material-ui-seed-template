@@ -127,6 +127,10 @@ export const JWTProvider = ({ children }) => {
 
     const resetPassword = async (email) => {
         console.log(email);
+        const response = await axios.post(`/api/v1/auth/forgot/password`, {
+            email,
+        });
+        let data = response.data;
     };
 
     const updateProfile = () => {};

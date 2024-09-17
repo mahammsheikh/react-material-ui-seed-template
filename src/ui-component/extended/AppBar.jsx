@@ -78,12 +78,12 @@ const AppBar = ({ ...others }) => {
                             <Button color="inherit" component={RouterLink} to="/login" target="_blank">
                                 Dashboard
                             </Button>
-                            <Button color="inherit" component={Link} href="https://codedthemes.gitbook.io/berry" target="_blank">
+                            <Button color="inherit" component={Link} href="https://conradlabs.com" target="_blank">
                                 Documentation
                             </Button>
                             <Button
                                 component={Link}
-                                href="https://links.codedthemes.com/hsqll"
+                                href="https://conradlabs.com"
                                 disableElevation
                                 variant="contained"
                                 color="secondary"
@@ -122,7 +122,7 @@ const AppBar = ({ ...others }) => {
                                             </Link>
                                             <Link
                                                 sx={{ textDecoration: 'none' }}
-                                                href="https://codedthemes.gitbook.io/berry"
+                                                href="https://conradlabs.com"
                                                 target="_blank"
                                             >
                                                 <ListItemButton component="a">
@@ -134,7 +134,7 @@ const AppBar = ({ ...others }) => {
                                             </Link>
                                             <Link
                                                 sx={{ textDecoration: 'none' }}
-                                                href="https://links.codedthemes.com/hsqll"
+                                                href="https://conradlabs.com"
                                                 target="_blank"
                                             >
                                                 <ListItemButton component="a">

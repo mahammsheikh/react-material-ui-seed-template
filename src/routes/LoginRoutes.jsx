@@ -11,6 +11,7 @@ const AuthLogin = Loadable(lazy(() => import('views/pages/authentication/Login')
 const AuthRegister = Loadable(lazy(() => import('views/pages/authentication/Register')));
 const AuthForgotPassword = Loadable(lazy(() => import('views/pages/authentication/ForgotPassword')));
 const AuthCheckMail = Loadable(lazy(() => import('views/pages/authentication/CheckMail')));
+const AuthResetPassword = Loadable(lazy(() => import('views/pages/authentication/auth-forms/AuthResetPassword')));
 
 // ==============================|| AUTH ROUTING ||============================== //
 
@@ -43,6 +44,10 @@ const LoginRoutes = {
         {
             path: '/check-mail',
             element: <AuthCheckMail />
+        },
+        {
+            path: '/password-reset',
+            element: <AuthResetPassword />
         }
     ]
 };

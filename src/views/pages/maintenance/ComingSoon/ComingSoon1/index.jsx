@@ -288,7 +288,7 @@ const ComingSoon1 = () => {
                                                         <Grid item>
                                                             <ButtonBase
                                                                 component={Link}
-                                                                href="https://links.codedthemes.com/HTIBc"
+                                                                href="https://conradlabs.com"
                                                                 target="_blank"
                                                                 aria-label="blog"
                                                             >
@@ -313,57 +313,7 @@ const ComingSoon1 = () => {
                                                         <Grid item>
                                                             <ButtonBase
                                                                 component={Link}
-                                                                href="https://www.facebook.com/codedthemes"
-                                                                target="_blank"
-                                                                aria-label="facebook"
-                                                            >
-                                                                <Avatar
-                                                                    sx={{
-                                                                        ...theme.typography.commonAvatar,
-                                                                        ...theme.typography.mediumAvatar,
-                                                                        bgcolor:
-                                                                            theme.palette.mode === ThemeMode.DARK
-                                                                                ? theme.palette.dark.main
-                                                                                : theme.palette.primary.light,
-                                                                        color:
-                                                                            theme.palette.mode === ThemeMode.DARK
-                                                                                ? theme.palette.primary.main
-                                                                                : theme.palette.primary.dark
-                                                                    }}
-                                                                >
-                                                                    <FacebookIcon />
-                                                                </Avatar>
-                                                            </ButtonBase>
-                                                        </Grid>
-                                                        <Grid item>
-                                                            <ButtonBase
-                                                                component={Link}
-                                                                href="https://twitter.com/codedthemes"
-                                                                target="_blank"
-                                                                aria-label="twitter"
-                                                            >
-                                                                <Avatar
-                                                                    sx={{
-                                                                        ...theme.typography.commonAvatar,
-                                                                        ...theme.typography.mediumAvatar,
-                                                                        bgcolor:
-                                                                            theme.palette.mode === ThemeMode.DARK
-                                                                                ? theme.palette.dark.main
-                                                                                : theme.palette.warning.light,
-                                                                        color:
-                                                                            theme.palette.mode === ThemeMode.DARK
-                                                                                ? theme.palette.warning.dark
-                                                                                : theme.palette.warning.dark
-                                                                    }}
-                                                                >
-                                                                    <TwitterIcon />
-                                                                </Avatar>
-                                                            </ButtonBase>
-                                                        </Grid>
-                                                        <Grid item>
-                                                            <ButtonBase
-                                                                component={Link}
-                                                                href="https://github.com/codedthemes"
+                                                                href="https://github.com/conrad-labs"
                                                                 target="_blank"
                                                                 aria-label="github"
                                                             >
@@ -385,29 +335,6 @@ const ComingSoon1 = () => {
                                                                 </Avatar>
                                                             </ButtonBase>
                                                         </Grid>
-                                                        <Grid item>
-                                                            <ButtonBase
-                                                                component={Link}
-                                                                href="https://dribbble.com/codedthemes"
-                                                                target="_blank"
-                                                                aria-label="dribble"
-                                                            >
-                                                                <Avatar
-                                                                    sx={{
-                                                                        ...theme.typography.commonAvatar,
-                                                                        ...theme.typography.mediumAvatar,
-                                                                        bgcolor:
-                                                                            theme.palette.mode === ThemeMode.DARK
-                                                                                ? theme.palette.dark.main
-                                                                                : 'grey.100',
-                                                                        color:
-                                                                            theme.palette.mode === ThemeMode.DARK ? 'grey.600' : 'grey.500'
-                                                                    }}
-                                                                >
-                                                                    <IconBrandDribbble />
-                                                                </Avatar>
-                                                            </ButtonBase>
-                                                        </Grid>
                                                     </Grid>
                                                 </Grid>
                                                 <Grid item xs={12}>
@@ -418,7 +345,7 @@ const ComingSoon1 = () => {
                                                             </Typography>
                                                         </Grid>
                                                         <Grid item>
-                                                            <img src={companyLogo} alt="Berry" width="128" />
+                                                            <img src={companyLogo} alt="Conrad Labs" width="128" />
                                                         </Grid>
                                                     </Grid>
                                                 </Grid>
