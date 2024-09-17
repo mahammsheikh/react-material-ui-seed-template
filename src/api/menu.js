@@ -54,8 +54,6 @@ export function useGetMenuMaster() {
 }
 
 export function handlerDrawerOpen(isDashboardDrawerOpened) {
-    // to update local state based on key
-
     mutate(
         endpoints.key + endpoints.master,
         (currentMenuMaster) => {
