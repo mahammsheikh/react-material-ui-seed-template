@@ -64,6 +64,30 @@ const FrmFormsWizard = Loadable(lazy(() => import('views/forms/forms-wizard')));
 const ChartApexchart = Loadable(lazy(() => import('views/forms/chart/Apexchart')));
 const OrgChartPage = Loadable(lazy(() => import('views/forms/chart/OrgChart')));
 
+// basic ui-elements routing
+const BasicUIAccordion = Loadable(lazy(() => import('views/ui-elements/basic/UIAccordion')));
+const BasicUIAvatar = Loadable(lazy(() => import('views/ui-elements/basic/UIAvatar')));
+const BasicUIBadges = Loadable(lazy(() => import('views/ui-elements/basic/UIBadges')));
+const BasicUIBreadcrumb = Loadable(lazy(() => import('views/ui-elements/basic/UIBreadcrumb')));
+const BasicUICards = Loadable(lazy(() => import('views/ui-elements/basic/UICards')));
+const BasicUIChip = Loadable(lazy(() => import('views/ui-elements/basic/UIChip')));
+const BasicUIList = Loadable(lazy(() => import('views/ui-elements/basic/UIList')));
+const BasicUITabs = Loadable(lazy(() => import('views/ui-elements/basic/UITabs')));
+
+// advance ui-elements routing
+const AdvanceUIAlert = Loadable(lazy(() => import('views/ui-elements/advance/UIAlert')));
+const AdvanceUIDialog = Loadable(lazy(() => import('views/ui-elements/advance/UIDialog')));
+const AdvanceUIPagination = Loadable(lazy(() => import('views/ui-elements/advance/UIPagination')));
+const AdvanceUIProgress = Loadable(lazy(() => import('views/ui-elements/advance/UIProgress')));
+const AdvanceUIRating = Loadable(lazy(() => import('views/ui-elements/advance/UIRating')));
+const AdvanceUISnackbar = Loadable(lazy(() => import('views/ui-elements/advance/UISnackbar')));
+const AdvanceUISkeleton = Loadable(lazy(() => import('views/ui-elements/advance/UISkeleton')));
+const AdvanceUISpeeddial = Loadable(lazy(() => import('views/ui-elements/advance/UISpeeddial')));
+const AdvanceUITimeline = Loadable(lazy(() => import('views/ui-elements/advance/UITimeline')));
+const AdvanceUIToggleButton = Loadable(lazy(() => import('views/ui-elements/advance/UIToggleButton')));
+const AdvanceUITreeview = Loadable(lazy(() => import('views/ui-elements/advance/UITreeview')));
+
+
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -242,6 +266,86 @@ const MainRoutes = {
         path: '/forms/map',
         element: <AppMap />
     },
+
+    {
+      path: '/basic/accordion',
+      element: <BasicUIAccordion />
+  },
+  {
+      path: '/basic/avatar',
+      element: <BasicUIAvatar />
+  },
+  {
+      path: '/basic/badges',
+      element: <BasicUIBadges />
+  },
+  {
+      path: '/basic/breadcrumb',
+      element: <BasicUIBreadcrumb />
+  },
+  {
+      path: '/basic/cards',
+      element: <BasicUICards />
+  },
+  {
+      path: '/basic/chip',
+      element: <BasicUIChip />
+  },
+  {
+      path: '/basic/list',
+      element: <BasicUIList />
+  },
+  {
+      path: '/basic/tabs',
+      element: <BasicUITabs />
+  },
+
+  {
+      path: '/advance/alert',
+      element: <AdvanceUIAlert />
+  },
+  {
+      path: '/advance/dialog',
+      element: <AdvanceUIDialog />
+  },
+  {
+      path: '/advance/pagination',
+      element: <AdvanceUIPagination />
+  },
+  {
+      path: '/advance/progress',
+      element: <AdvanceUIProgress />
+  },
+  {
+      path: '/advance/rating',
+      element: <AdvanceUIRating />
+  },
+  {
+      path: '/advance/snackbar',
+      element: <AdvanceUISnackbar />
+  },
+  {
+      path: '/advance/skeleton',
+      element: <AdvanceUISkeleton />
+  },
+  {
+      path: '/advance/speeddial',
+      element: <AdvanceUISpeeddial />
+  },
+  {
+      path: '/advance/timeline',
+      element: <AdvanceUITimeline />
+  },
+  {
+      path: '/advance/toggle-button',
+      element: <AdvanceUIToggleButton />
+  },
+  {
+      path: '/advance/treeview',
+      element: <AdvanceUITreeview />
+  },
+
+
 
 
 
