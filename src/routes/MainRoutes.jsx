@@ -46,16 +46,6 @@ const TableCustomized = Loadable(lazy(() => import('views/forms/tables/TablesCus
 const TableStickyHead = Loadable(lazy(() => import('views/forms/tables/TableStickyHead')));
 const TableCollapsible = Loadable(lazy(() => import('views/forms/tables/TableCollapsible')));
 
-// data-grid routing
-const DataGridBasic = Loadable(lazy(() => import('views/forms/data-grid/DataGridBasic')));
-const DataGridInlineEditing = Loadable(lazy(() => import('views/forms/data-grid/InLineEditing')));
-const DataGridColumnGrouping = Loadable(lazy(() => import('views/forms/data-grid/ColumnGroups')));
-const DataGridSaveRestoreState = Loadable(lazy(() => import('views/forms/data-grid/SaveRestoreState')));
-const DataGridQuickFilter = Loadable(lazy(() => import('views/forms/data-grid/QuickFilter')));
-const DataGridColumnVisibility = Loadable(lazy(() => import('views/forms/data-grid/ColumnVisibility')));
-const DataGridColumnVirtualization = Loadable(lazy(() => import('views/forms/data-grid/ColumnVirtualization')));
-const DataGridColumnMenu = Loadable(lazy(() => import('views/forms/data-grid/ColumnMenu')));
-
 // forms validation
 const FrmFormsValidation = Loadable(lazy(() => import('views/forms/forms-validation')));
 const FrmFormsWizard = Loadable(lazy(() => import('views/forms/forms-wizard')));
@@ -214,38 +204,7 @@ const MainRoutes = {
         path: '/tables/tbl-collapse',
         element: <TableCollapsible />
     },
-    {
-        path: '/data-grid/data-grid-basic',
-        element: <DataGridBasic />
-    },
-    {
-        path: '/data-grid/data-grid-inline-editing',
-        element: <DataGridInlineEditing />
-    },
-    {
-        path: '/data-grid/data-grid-column-groups',
-        element: <DataGridColumnGrouping />
-    },
-    {
-        path: '/data-grid/data-grid-save-restore',
-        element: <DataGridSaveRestoreState />
-    },
-    {
-        path: '/data-grid/data-grid-quick-filter',
-        element: <DataGridQuickFilter />
-    },
-    {
-        path: '/data-grid/data-grid-column-visibility',
-        element: <DataGridColumnVisibility />
-    },
-    {
-        path: '/data-grid/data-grid-column-virtualization',
-        element: <DataGridColumnVirtualization />
-    },
-    {
-        path: '/data-grid/data-grid-column-menu',
-        element: <DataGridColumnMenu />
-    },
+    
     {
         path: 'forms/charts/apexchart',
         element: <ChartApexchart />

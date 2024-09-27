@@ -248,70 +248,7 @@ const forms = {
                 }
             ]
         },
-        {
-            id: 'data-grid',
-            title: <FormattedMessage id="data-grid" />,
-            type: 'collapse',
-            icon: icons.IconTable,
-            children: [
-                {
-                    id: 'data-grid-basic',
-                    title: <FormattedMessage id="data-grid-basic" />,
-                    type: 'item',
-                    url: '/data-grid/data-grid-basic',
-                    breadcrumbs: false
-                },
-                {
-                    id: 'data-grid-inline-editing',
-                    title: <FormattedMessage id="data-grid-inline-editing" />,
-                    type: 'item',
-                    url: '/data-grid/data-grid-inline-editing',
-                    breadcrumbs: false
-                },
-                {
-                    id: 'data-grid-column-groups',
-                    title: <FormattedMessage id="data-grid-column-groups" />,
-                    type: 'item',
-                    url: '/data-grid/data-grid-column-groups',
-                    breadcrumbs: false
-                },
-                {
-                    id: 'data-grid-save-restore',
-                    title: <FormattedMessage id="data-grid-save-restore" />,
-                    type: 'item',
-                    url: '/data-grid/data-grid-save-restore',
-                    breadcrumbs: false
-                },
-                {
-                    id: 'data-grid-quick-filter',
-                    title: <FormattedMessage id="data-grid-quick-filter" />,
-                    type: 'item',
-                    url: '/data-grid/data-grid-quick-filter',
-                    breadcrumbs: false
-                },
-                {
-                    id: 'data-grid-column-visibility',
-                    title: <FormattedMessage id="data-grid-column-visibility" />,
-                    type: 'item',
-                    url: '/data-grid/data-grid-column-visibility',
-                    breadcrumbs: false
-                },
-                {
-                    id: 'data-grid-column-virtualization',
-                    title: <FormattedMessage id="data-grid-column-virtualization" />,
-                    type: 'item',
-                    url: '/data-grid/data-grid-column-virtualization',
-                    breadcrumbs: false
-                },
-                {
-                    id: 'data-grid-column-menu',
-                    title: <FormattedMessage id="data-grid-column-menu" />,
-                    type: 'item',
-                    url: '/data-grid/data-grid-column-menu',
-                    breadcrumbs: false
-                }
-            ]
-        },
+       
         {
             id: 'charts',
             title: <FormattedMessage id="charts" />,
