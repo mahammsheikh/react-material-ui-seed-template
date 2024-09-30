@@ -25,13 +25,13 @@ export default defineConfig({
     },
     server: {
         // this ensures that the browser opens upon server start
-        open: true,
+        // open: true,
         // this sets a default port to 8000
         port: 8000
     },
     preview: {
         // this ensures that the browser opens upon preview start
-        open: true,
+        // open: true,
         // this sets a default port to 8000
         port: 8000
     }
