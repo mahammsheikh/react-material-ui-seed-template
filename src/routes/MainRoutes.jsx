@@ -4,9 +4,23 @@ import { lazy } from "react";
 import AuthGuard from "utils/route-guard/AuthGuard";
 import MainLayout from "layout/MainLayout";
 import Loadable from "ui-component/Loadable";
+import { element } from "prop-types";
+
+const UtilsTypography = Loadable(
+  lazy(() => import("views/utilities/Typography"))
+);
+const UtilsColor = Loadable(lazy(() => import("views/utilities/Color")));
+const UtilsShadow = Loadable(lazy(() => import("views/utilities/Shadow")));
+const UtilsAnimation = Loadable(
+  lazy(() => import("views/utilities/Animation"))
+);
+const UtilsGrid = Loadable(lazy(() => import("views/utilities/Grid")));
 
 // sample page routing
-const SamplePage = Loadable(lazy(() => import("views/sample-page")));
+const SamplePage = Loadable(lazy(() => import('views/sample-page')));
+
+// widget page
+const Widget = Loadable(lazy(()=> import("views/widget")))
 
 // map routing
 const AppMap = Loadable(lazy(() => import('views/application/map')));
@@ -81,237 +95,254 @@ const AdvanceUITreeview = Loadable(lazy(() => import('views/ui-elements/advance/
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
-  path: "/",
-  element: (
-    <AuthGuard>
-      <MainLayout />
-    </AuthGuard>
-  ),
-  children: [
-    {
-      path: "/",
-      element: <SamplePage />,
-    },
-    {
-        path: "/sample-page",
-        element: <SamplePage />,
-      },
-    {
-      path: "/components/text-field",
-      element: <FrmComponentsTextfield />,
-    },
-    {
-      path: "/components/button",
-      element: <FrmComponentsButton />,
-    },
-    {
-      path: "/components/checkbox",
-      element: <FrmComponentsCheckbox />,
-    },
-    {
-      path: "/components/radio",
-      element: <FrmComponentsRadio />,
-    },
-    {
-      path: "/components/autocomplete",
-      element: <FrmComponentsAutoComplete />,
-    },
-    {
-      path: "/components/slider",
-      element: <FrmComponentsSlider />,
-    },
-    {
-      path: "/components/switch",
-      element: <FrmComponentsSwitch />,
-    },
-    {
-      path: "/components/date-time",
-      element: <FrmComponentsDateTime />,
-    },
-    {
-      path: "/forms/frm-autocomplete",
-      element: <FrmAutocomplete />,
-    },
-    {
-      path: "/forms/frm-mask",
-      element: <FrmMask />,
-    },
-    {
-      path: "/forms/frm-clipboard",
-      element: <FrmClipboard />,
-    },
-    {
-      path: "/forms/frm-recaptcha",
-      element: <FrmRecaptcha />,
-    },
-    {
-      path: "/forms/frm-wysiwug",
-      element: <FrmWysiwugEditor />,
-    },
-    {
-        path: '/forms/frm-modal',
-        element: <FrmModal />
-    },
-    {
-        path: '/forms/frm-tooltip',
-        element: <FrmTooltip />
-    },
-    {
-        path: '/forms/frm-dropzone',
-        element: <FrmDropzone />
-    },
-    {
-        path: '/forms/layouts/layouts',
-        element: <FrmLayoutLayout />
-    },
-    {
-        path: '/forms/layouts/multi-column-forms',
-        element: <FrmLayoutMultiColumnForms />
-    },
-    {
-        path: '/forms/layouts/action-bar',
-        element: <FrmLayoutActionBar />
-    },
-    {
-        path: '/forms/layouts/sticky-action-bar',
-        element: <FrmLayoutStickyActionBar />
-    },
-    {
-        path: '/tables/tbl-basic',
-        element: <TableBasic />
-    },
-    {
-        path: '/tables/tbl-dense',
-        element: <TableDense />
-    },
-    {
-        path: '/tables/tbl-enhanced',
-        element: <TableEnhanced />
-    },
-    {
-        path: '/tables/tbl-data',
-        element: <TableData />
-    },
-    {
-        path: '/tables/tbl-customized',
-        element: <TableCustomized />
-    },
-    {
-        path: '/tables/tbl-sticky-header',
-        element: <TableStickyHead />
-    },
-    {
-        path: '/tables/tbl-collapse',
-        element: <TableCollapsible />
-    },
+    path: '/',
+    element: (
+        <AuthGuard>
+            <MainLayout />
+        </AuthGuard>
+    ),
+    children: [
+        {
+            path: '/',
+            element: <SamplePage />
+        },
+        {
+            path: '/sample-page',
+            element: <SamplePage />
+        },
+        {
+          path: "/utils/util-typography",
+          element: <UtilsTypography />,
+        },
+        {
+          path: "/utils/util-color",
+          element: <UtilsColor />,
+        },
+        {
+          path: "/utils/util-shadow",
+          element: <UtilsShadow />,
+        },
+        {
+          path: "/utils/util-animation",
+          element: <UtilsAnimation />,
+        },
+        {
+          path: "/utils/util-grid",
+          element: <UtilsGrid />,
+        },
+        {
+          path: "/widget",
+          element: <Widget/>
+        },
+        {
+          path: "/components/text-field",
+          element: <FrmComponentsTextfield />,
+        },
+        {
+          path: "/components/button",
+          element: <FrmComponentsButton />,
+        },
+        {
+          path: "/components/checkbox",
+          element: <FrmComponentsCheckbox />,
+        },
+        {
+          path: "/components/radio",
+          element: <FrmComponentsRadio />,
+        },
+        {
+          path: "/components/autocomplete",
+          element: <FrmComponentsAutoComplete />,
+        },
+        {
+          path: "/components/slider",
+          element: <FrmComponentsSlider />,
+        },
+        {
+          path: "/components/switch",
+          element: <FrmComponentsSwitch />,
+        },
+        {
+          path: "/components/date-time",
+          element: <FrmComponentsDateTime />,
+        },
+        {
+          path: "/forms/frm-autocomplete",
+          element: <FrmAutocomplete />,
+        },
+        {
+          path: "/forms/frm-mask",
+          element: <FrmMask />,
+        },
+        {
+          path: "/forms/frm-clipboard",
+          element: <FrmClipboard />,
+        },
+        {
+          path: "/forms/frm-recaptcha",
+          element: <FrmRecaptcha />,
+        },
+        {
+          path: "/forms/frm-wysiwug",
+          element: <FrmWysiwugEditor />,
+        },
+        {
+            path: '/forms/frm-modal',
+            element: <FrmModal />
+        },
+        {
+            path: '/forms/frm-tooltip',
+            element: <FrmTooltip />
+        },
+        {
+            path: '/forms/frm-dropzone',
+            element: <FrmDropzone />
+        },
+        {
+            path: '/forms/layouts/layouts',
+            element: <FrmLayoutLayout />
+        },
+        {
+            path: '/forms/layouts/multi-column-forms',
+            element: <FrmLayoutMultiColumnForms />
+        },
+        {
+            path: '/forms/layouts/action-bar',
+            element: <FrmLayoutActionBar />
+        },
+        {
+            path: '/forms/layouts/sticky-action-bar',
+            element: <FrmLayoutStickyActionBar />
+        },
+        {
+            path: '/tables/tbl-basic',
+            element: <TableBasic />
+        },
+        {
+            path: '/tables/tbl-dense',
+            element: <TableDense />
+        },
+        {
+            path: '/tables/tbl-enhanced',
+            element: <TableEnhanced />
+        },
+        {
+            path: '/tables/tbl-data',
+            element: <TableData />
+        },
+        {
+            path: '/tables/tbl-customized',
+            element: <TableCustomized />
+        },
+        {
+            path: '/tables/tbl-sticky-header',
+            element: <TableStickyHead />
+        },
+        {
+            path: '/tables/tbl-collapse',
+            element: <TableCollapsible />
+        },
+        
+        {
+            path: 'forms/charts/apexchart',
+            element: <ChartApexchart />
+        },
+        {
+            path: '/forms/charts/orgchart',
+            element: <OrgChartPage />
+        },
+        {
+            path: '/forms/forms-validation',
+            element: <FrmFormsValidation />
+        },
+        {
+            path: '/forms/forms-wizard',
+            element: <FrmFormsWizard />
+        },
+        {
+            path: '/forms/map',
+            element: <AppMap />
+        },
     
-    {
-        path: 'forms/charts/apexchart',
-        element: <ChartApexchart />
-    },
-    {
-        path: '/forms/charts/orgchart',
-        element: <OrgChartPage />
-    },
-    {
-        path: '/forms/forms-validation',
-        element: <FrmFormsValidation />
-    },
-    {
-        path: '/forms/forms-wizard',
-        element: <FrmFormsWizard />
-    },
-    {
-        path: '/forms/map',
-        element: <AppMap />
-    },
+        {
+          path: '/basic/accordion',
+          element: <BasicUIAccordion />
+      },
+      {
+          path: '/basic/avatar',
+          element: <BasicUIAvatar />
+      },
+      {
+          path: '/basic/badges',
+          element: <BasicUIBadges />
+      },
+      {
+          path: '/basic/breadcrumb',
+          element: <BasicUIBreadcrumb />
+      },
+      {
+          path: '/basic/cards',
+          element: <BasicUICards />
+      },
+      {
+          path: '/basic/chip',
+          element: <BasicUIChip />
+      },
+      {
+          path: '/basic/list',
+          element: <BasicUIList />
+      },
+      {
+          path: '/basic/tabs',
+          element: <BasicUITabs />
+      },
+    
+      {
+          path: '/advance/alert',
+          element: <AdvanceUIAlert />
+      },
+      {
+          path: '/advance/dialog',
+          element: <AdvanceUIDialog />
+      },
+      {
+          path: '/advance/pagination',
+          element: <AdvanceUIPagination />
+      },
+      {
+          path: '/advance/progress',
+          element: <AdvanceUIProgress />
+      },
+      {
+          path: '/advance/rating',
+          element: <AdvanceUIRating />
+      },
+      {
+          path: '/advance/snackbar',
+          element: <AdvanceUISnackbar />
+      },
+      {
+          path: '/advance/skeleton',
+          element: <AdvanceUISkeleton />
+      },
+      {
+          path: '/advance/speeddial',
+          element: <AdvanceUISpeeddial />
+      },
+      {
+          path: '/advance/timeline',
+          element: <AdvanceUITimeline />
+      },
+      {
+          path: '/advance/toggle-button',
+          element: <AdvanceUIToggleButton />
+      },
+      {
+          path: '/advance/treeview',
+          element: <AdvanceUITreeview />
+      },
 
-    {
-      path: '/basic/accordion',
-      element: <BasicUIAccordion />
-  },
-  {
-      path: '/basic/avatar',
-      element: <BasicUIAvatar />
-  },
-  {
-      path: '/basic/badges',
-      element: <BasicUIBadges />
-  },
-  {
-      path: '/basic/breadcrumb',
-      element: <BasicUIBreadcrumb />
-  },
-  {
-      path: '/basic/cards',
-      element: <BasicUICards />
-  },
-  {
-      path: '/basic/chip',
-      element: <BasicUIChip />
-  },
-  {
-      path: '/basic/list',
-      element: <BasicUIList />
-  },
-  {
-      path: '/basic/tabs',
-      element: <BasicUITabs />
-  },
-
-  {
-      path: '/advance/alert',
-      element: <AdvanceUIAlert />
-  },
-  {
-      path: '/advance/dialog',
-      element: <AdvanceUIDialog />
-  },
-  {
-      path: '/advance/pagination',
-      element: <AdvanceUIPagination />
-  },
-  {
-      path: '/advance/progress',
-      element: <AdvanceUIProgress />
-  },
-  {
-      path: '/advance/rating',
-      element: <AdvanceUIRating />
-  },
-  {
-      path: '/advance/snackbar',
-      element: <AdvanceUISnackbar />
-  },
-  {
-      path: '/advance/skeleton',
-      element: <AdvanceUISkeleton />
-  },
-  {
-      path: '/advance/speeddial',
-      element: <AdvanceUISpeeddial />
-  },
-  {
-      path: '/advance/timeline',
-      element: <AdvanceUITimeline />
-  },
-  {
-      path: '/advance/toggle-button',
-      element: <AdvanceUIToggleButton />
-  },
-  {
-      path: '/advance/treeview',
-      element: <AdvanceUITreeview />
-  },
-
-
-
-
-
-
-
-
-  ],
+    ]
 };
 
 export default MainRoutes;
