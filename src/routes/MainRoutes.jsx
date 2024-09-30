@@ -4,6 +4,7 @@ import { lazy } from "react";
 import AuthGuard from "utils/route-guard/AuthGuard";
 import MainLayout from "layout/MainLayout";
 import Loadable from "ui-component/Loadable";
+import { element } from "prop-types";
 
 const UtilsTypography = Loadable(
   lazy(() => import("views/utilities/Typography"))
@@ -17,6 +18,9 @@ const UtilsGrid = Loadable(lazy(() => import("views/utilities/Grid")));
 
 // sample page routing
 const SamplePage = Loadable(lazy(() => import("views/sample-page")));
+
+// widget page
+const Widget = Loadable(lazy(()=> import("views/widget")))
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -56,6 +60,10 @@ const MainRoutes = {
       path: "/utils/util-grid",
       element: <UtilsGrid />,
     },
+    {
+      path: "/widget",
+      element: <Widget/>
+    }
   ],
 };
 
