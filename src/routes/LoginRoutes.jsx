@@ -11,7 +11,7 @@ const AuthLogin = Loadable(lazy(() => import('views/pages/authentication/Login')
 const AuthRegister = Loadable(lazy(() => import('views/pages/authentication/Register')));
 const AuthForgotPassword = Loadable(lazy(() => import('views/pages/authentication/ForgotPassword')));
 const AuthCheckMail = Loadable(lazy(() => import('views/pages/authentication/CheckMail')));
-const AuthResetPassword = Loadable(lazy(() => import('views/pages/authentication/auth-forms/AuthResetPassword')));
+const AuthResetPassword = Loadable(lazy(()=> import('views/pages/authentication/ResetPassword')))
 
 // ==============================|| AUTH ROUTING ||============================== //
 
