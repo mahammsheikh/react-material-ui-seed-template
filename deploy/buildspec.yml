@@ -1,21 +1,21 @@
- version: 0.2
+version: 0.2
 
 phases:
     pre_build:
         commands:
-            - echo Installing source NPM dependencies....
-            - npm install
+            - echo Installing source dependencies....
+            - yarn install
     build:
         commands:
             - echo Building...
-            - npm run build
+            - yarn build
     post_build:
         commands:
             - echo Deploying to S3...
-            - aws s3 sync build/ s3://$S3_BUCKET_NAME/ --delete
+            - aws s3 sync dist/ s3://$S3_BUCKET_NAME/ --delete
             - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths /
 
 artifacts:
     files:
         - '**/*'
-    base-directory: 'build'
+    base-directory: 'dist'
