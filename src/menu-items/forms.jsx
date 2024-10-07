@@ -132,13 +132,6 @@ const forms = {
                     breadcrumbs: false
                 },
                 {
-                    id: 'frm-wysiwug',
-                    title: <FormattedMessage id="wysiwug-editor" />,
-                    type: 'item',
-                    url: '/forms/frm-wysiwug',
-                    breadcrumbs: false
-                },
-                {
                     id: 'frm-modal',
                     title: <FormattedMessage id="modal" />,
                     type: 'item',
