@@ -4,7 +4,7 @@ import { lazy } from "react";
 import AuthGuard from "utils/route-guard/AuthGuard";
 import MainLayout from "layout/MainLayout";
 import Loadable from "ui-component/Loadable";
-import { element } from "prop-types";
+
 
 const UtilsTypography = Loadable(
   lazy(() => import("views/utilities/Typography"))
@@ -46,7 +46,6 @@ const FrmAutocomplete = Loadable(lazy(() => import('views/forms/plugins/AutoComp
 const FrmMask = Loadable(lazy(() => import('views/forms/plugins/Mask')));
 const FrmClipboard = Loadable(lazy(() => import('views/forms/plugins/Clipboard')));
 const FrmRecaptcha = Loadable(lazy(() => import('views/forms/plugins/Recaptcha')));
-const FrmWysiwugEditor = Loadable(lazy(() => import('views/forms/plugins/WysiwugEditor')));
 const FrmModal = Loadable(lazy(() => import('views/forms/plugins/Modal')));
 const FrmTooltip = Loadable(lazy(() => import('views/forms/plugins/Tooltip')));
 const FrmDropzone = Loadable(lazy(() => import('views/forms/plugins/Dropzone')));
@@ -181,10 +180,6 @@ const MainRoutes = {
         {
           path: "/forms/frm-recaptcha",
           element: <FrmRecaptcha />,
-        },
-        {
-          path: "/forms/frm-wysiwug",
-          element: <FrmWysiwugEditor />,
         },
         {
             path: '/forms/frm-modal',
