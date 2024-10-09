@@ -1,8 +1,12 @@
+
+
 version: 0.2
 
 phases:
     pre_build:
         commands:
+            - echo Installing Yarn using npm...
+            - npm install -g yarn  # Install Yarn globally using npm
             - echo Installing source dependencies....
             - yarn install
     build:
@@ -11,9 +15,9 @@ phases:
             - yarn build
     post_build:
         commands:
-            - echo Deploying to S3...
-            - aws s3 sync dist/ s3://$S3_BUCKET_NAME/ --delete
+            - echo Build completed. Artifacts are located in the dist folder.
             - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths /
+
 
 artifacts:
     files:
