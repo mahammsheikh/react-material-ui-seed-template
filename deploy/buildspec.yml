@@ -1,27 +1,22 @@
 version: 0.2
 
 phases:
-    pre_build:
-        commands:
-            - echo Installing Node Version Manager (nvm)...
-            - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-            - export NVM_DIR="$HOME/.nvm"
-            - [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-            - nvm install 18  # Install Node.js version 18
-            - nvm use 18  # Use Node.js version 18
-            - echo Installing Yarn...
-            - npm install -g yarn
-            - echo Installing source dependencies....
-            - yarn install
-    build:
-        commands:
-            - echo Building...
-            - yarn build
-    post_build:
-        commands:
-            - echo Build completed. Artifacts are located in the dist folder.
+  pre_build:
+    commands:
+      - echo Installing Node.js and Yarn...
+      - curl -o- https://yarnpkg.com/install.sh | bash
+      - export PATH="$HOME/.yarn/bin:$PATH"
+      - echo Installing source dependencies....
+      - yarn install
+  build:
+    commands:
+      - echo Building...
+      - yarn build
+  post_build:
+    commands:
+      - echo Build completed. Artifacts are located in the dist folder.
 
 artifacts:
-    files:
-        - '**/*'
-    base-directory: 'dist'
+  files:
+    - '**/*'
+  base-directory: 'dist'
