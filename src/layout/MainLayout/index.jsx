@@ -14,6 +14,7 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import HorizontalBar from './HorizontalBar';
 import MainContentStyled from './MainContentStyled';
+import Customization from '../Customization';
 import Loader from 'ui-component/Loader';
 import Breadcrumbs from 'ui-component/extended/Breadcrumbs';
 
@@ -66,6 +67,7 @@ const MainLayout = () => {
                     <Outlet />
                 </Container>
             </MainContentStyled>
+            <Customization/>
         </Box>
     );
 };
