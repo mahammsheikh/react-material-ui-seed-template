@@ -19,8 +19,8 @@ import { ThemeMode } from 'config';
 import Chip from 'ui-component/extended/Chip';
 
 // assets
-import { IconBrandTelegram, IconBuildingStore, IconMailbox, IconPhoto } from '@tabler/icons-react';
-import User1 from 'assets/images/users/user-round.svg';
+import { IconBrandTelegram, IconMailbox, IconPhoto } from '@tabler/icons-react';
+import PrisonMike from 'assets/images/users/PrisonMike.png'
 
 const ListItemWrapper = ({ children }) => {
     const theme = useTheme();
@@ -57,80 +57,6 @@ const NotificationList = () => {
             <ListItemWrapper>
                 <ListItem alignItems="center" disablePadding>
                     <ListItemAvatar>
-                        <Avatar alt="John Doe" src={User1} />
-                    </ListItemAvatar>
-                    <ListItemText primary="John Doe" />
-                    <ListItemSecondaryAction>
-                        <Stack direction="row" alignItems="center" justifyContent="flex-end">
-                            <Typography variant="caption">2 min ago</Typography>
-                        </Stack>
-                    </ListItemSecondaryAction>
-                </ListItem>
-                <Stack spacing={2} sx={containerSX}>
-                    <Typography variant="subtitle2">It is a long established fact that a reader will be distracted</Typography>
-                    <Stack direction="row" alignItems="center" spacing={1}>
-                        <Chip
-                            label="Unread"
-                            chipcolor="error"
-                            variant="outlined"
-                            size="small"
-                            sx={{
-                                width: 'min-content',
-                                border: 'none',
-                                bgcolor: theme.palette.mode === ThemeMode.DARK ? 'dark.main' : 'orange.light'
-                            }}
-                        />
-                        <Chip
-                            label="New"
-                            chipcolor="warning"
-                            variant="outlined"
-                            size="small"
-                            sx={{
-                                width: 'min-content',
-                                border: 'none',
-                                bgcolor: theme.palette.mode === ThemeMode.DARK ? 'dark.main' : 'warning.light'
-                            }}
-                        />
-                    </Stack>
-                </Stack>
-            </ListItemWrapper>
-            <ListItemWrapper>
-                <ListItem alignItems="center" disablePadding>
-                    <ListItemAvatar>
-                        <Avatar
-                            sx={{
-                                color: 'success.dark',
-                                bgcolor: theme.palette.mode === ThemeMode.DARK ? 'dark.main' : 'success.light'
-                            }}
-                        >
-                            <IconBuildingStore stroke={1.5} size="20px" />
-                        </Avatar>
-                    </ListItemAvatar>
-                    <ListItemText primary={<Typography variant="subtitle1">Store Verification Done</Typography>} />
-                    <ListItemSecondaryAction>
-                        <Stack direction="row" alignItems="center" justifyContent="flex-end">
-                            <Typography variant="caption">2 min ago</Typography>
-                        </Stack>
-                    </ListItemSecondaryAction>
-                </ListItem>
-                <Stack spacing={2} sx={containerSX}>
-                    <Typography variant="subtitle2">We have successfully received your request.</Typography>
-                    <Chip
-                        label="Unread"
-                        chipcolor="error"
-                        variant="outlined"
-                        size="small"
-                        sx={{
-                            width: 'min-content',
-                            border: 'none',
-                            bgcolor: theme.palette.mode === ThemeMode.DARK ? 'dark.main' : 'orange.light'
-                        }}
-                    />
-                </Stack>
-            </ListItemWrapper>
-            <ListItemWrapper>
-                <ListItem alignItems="center" disablePadding>
-                    <ListItemAvatar>
                         <Avatar
                             sx={{
                                 color: 'primary.dark',
@@ -157,7 +83,7 @@ const NotificationList = () => {
             <ListItemWrapper>
                 <ListItem alignItems="center" disablePadding>
                     <ListItemAvatar>
-                        <Avatar alt="John Doe" src={User1} />
+                        <Avatar alt="John Doe" src={PrisonMike} />
                     </ListItemAvatar>
                     <ListItemText primary={<Typography variant="subtitle1">John Doe</Typography>} />
                     <ListItemSecondaryAction>
@@ -184,7 +110,7 @@ const NotificationList = () => {
             <ListItemWrapper>
                 <ListItem alignItems="center" disablePadding>
                     <ListItemAvatar>
-                        <Avatar alt="John Doe" src={User1} />
+                        <Avatar alt="John Doe" src={PrisonMike} />
                     </ListItemAvatar>
                     <ListItemText primary={<Typography variant="subtitle1">John Doe</Typography>} />
                     <ListItemSecondaryAction>
@@ -194,7 +120,7 @@ const NotificationList = () => {
                     </ListItemSecondaryAction>
                 </ListItem>
                 <Stack spacing={2} sx={containerSX}>
-                    <Typography variant="subtitle2">It is a long established fact that a reader will be distracted</Typography>
+                    <Typography variant="subtitle2">Where are the turtles?!</Typography>
                     <Chip
                         label="Confirmation of Account."
                         chipcolor="success"
