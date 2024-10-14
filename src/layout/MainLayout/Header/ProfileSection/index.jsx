@@ -32,7 +32,7 @@ import MainCard from 'ui-component/cards/MainCard';
 import Transitions from 'ui-component/extended/Transitions';
 import UpgradePlanCard from './UpgradePlanCard';
 import useAuth from 'hooks/useAuth';
-import User1 from 'assets/images/users/user-round.svg';
+import MichealTurtles from 'assets/images/users/michaelturtles.jpg'
 import { ThemeMode } from 'config';
 
 // assets
@@ -120,7 +120,7 @@ const ProfileSection = () => {
                 }}
                 icon={
                     <Avatar
-                        src={User1}
+                        src={MichealTurtles}
                         alt="user-images"
                         sx={{
                             ...theme.typography.mediumAvatar,
