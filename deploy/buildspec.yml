@@ -2,24 +2,28 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 18 # Specify Node.js version if using AWS CodeBuild with runtime-versions support.
     commands:
-      - echo install yarn...
+      - echo "Installing Yarn..."
       - npm install -g yarn
-      - echo yarn -v
+      - echo "Yarn version:"
       - yarn -v
   pre_build:
     commands:
-      - echo Installing source dependencies....
+      - echo "Installing source dependencies..."
       - yarn install
   build:
     commands:
-      - echo Building...
+      - echo "Building the project..."
       - yarn build
   post_build:
     commands:
-      - aws s3 sync build/ s3://$S3_BUCKET_NAME/ --delete
-      - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths /
-      - echo Build completed. Artifacts are located in the dist folder.
+      - echo "Syncing build folder to S3..."
+      - aws s3 sync dist/ s3://$S3_BUCKET_NAME/ --delete
+      - echo "Invalidating CloudFront cache..."
+      - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
+      - echo "Build completed. Artifacts are located in the dist folder."
 
 artifacts:
   files:
