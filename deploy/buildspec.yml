@@ -14,6 +14,8 @@ phases:
       - yarn build
   post_build:
     commands:
+      - aws s3 sync build/ s3://$S3_BUCKET_NAME/ --delete
+      - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths /
       - echo Build completed. Artifacts are located in the dist folder.
 
 artifacts:
