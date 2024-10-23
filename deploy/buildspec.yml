@@ -1,11 +1,22 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      - echo update npm...
+      - npm install -g n
+      - n latest
+      - npm update -g npm
+      - echo node -v
+      - node -v
+      - echo npm -v
+      - npm -v
+      - echo install yarn...
+      - npm install -g yarn
+      - echo yarn -v
+      - yarn -v
   pre_build:
     commands:
-      - echo Installing Node.js and Yarn...
-      - curl -o- https://yarnpkg.com/install.sh | bash
-      - export PATH="$HOME/.yarn/bin:$PATH"
       - echo Installing source dependencies....
       - yarn install
   build:
